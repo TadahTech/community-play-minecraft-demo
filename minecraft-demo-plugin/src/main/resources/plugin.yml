@@ -1,0 +1,7 @@
+name: minecraft-demo
+version: ${project.version}
+main: com.communityplay.minecraftdemo.MinecraftDemo
+prefix: CPDEMO
+authors: [TadahTech]
+description: A demo plugin for Community Play
+website: https://community-play.com
