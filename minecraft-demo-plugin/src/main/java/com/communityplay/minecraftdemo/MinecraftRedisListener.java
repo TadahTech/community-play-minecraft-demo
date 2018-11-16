@@ -29,9 +29,9 @@ public class MinecraftRedisListener implements PacketListener<PurchasedPackagePa
                 break;
         }
 
-        String line = ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "-=-=-=-=-=-=-=-=-" +
-          ChatColor.RESET + ChatColor.GOLD + " { Community Play Package } " +
-          ChatColor.DARK_AQUA + ChatColor.BOLD + "-=-=-=-=-=-=-=-=-";
+        String line = ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + ChatColor.STRIKETHROUGH + "-------------" +
+          ChatColor.RESET + ChatColor.GOLD + " { Community Play } " +
+          ChatColor.DARK_AQUA + ChatColor.BOLD + ChatColor.STRIKETHROUGH + "-------------";
 
         broadcast(line);
         broadcast(" ");

@@ -10,13 +10,11 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 @Service
 public class SpringRedisManager extends RedisManager {
 
-    private ExecutorService executorService;
+    private static final ExecutorService EXECUTOR_SERVICE = new ScheduledThreadPoolExecutor(100);
 
     @Autowired
     public SpringRedisManager() {
         super(generatePool(), "minecraft.demo", "spring-server", "spring-server");
-
-        this.executorService = new ScheduledThreadPoolExecutor(100);
     }
 
     @Override
@@ -26,6 +24,6 @@ public class SpringRedisManager extends RedisManager {
 
     @Override
     public void async(Runnable runnable) {
-        this.executorService.submit(runnable);
+        EXECUTOR_SERVICE.submit(runnable);
     }
 }

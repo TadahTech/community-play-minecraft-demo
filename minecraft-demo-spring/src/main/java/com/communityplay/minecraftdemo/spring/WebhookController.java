@@ -31,17 +31,6 @@ public class WebhookController {
             return new ResponseEntity<>("Unknonw origin secret", HttpStatus.BAD_REQUEST);
         }
 
-        switch (streamPackage.getName().toLowerCase()) {
-            case "Blow Me Up":
-                break;
-            case "Spawn Skeleton":
-                break;
-            case "Give Me a Hand":
-                break;
-            default:
-                break;
-        }
-
         PurchasedPackagePacket packet = new PurchasedPackagePacket();
         packet.setStreamPackage(streamPackage);
 
